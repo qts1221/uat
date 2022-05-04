@@ -1,0 +1,8 @@
+git常用命令：
+git  add 
+git  mv  index.txt  index.html  重命名文件
+git status  
+git stash 
+git branch -v       查看本地多少分支
+git log -n2 --oneline    查看日志，最近的两条commit，简洁查看   --all  查看所有分支   --graph  图形化的
+gitk   图形化界面
