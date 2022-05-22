@@ -21,7 +21,7 @@ public class FirstJava {
         //简陋的伤害收益计算公式如下，70级震离加专武基础暴击17.9%
         double temp = (100 + 4 * x) / 100.0 * //基础攻击倍率
                 (1 +//非暴击情况伤害期望
-                        ((17.9 + 4 * y) / 100.0 * (50 + 8 * z) / 100.0));//暴击情况下伤害期望
+                        ((20 + 4 * y) / 100.0 * (50 + 8 * z) / 100.0));//暴击情况下伤害期望
         System.out.println("总伤害期望为：" + temp);
     }
 
@@ -39,7 +39,7 @@ public class FirstJava {
         for (int i = 0; i <= 4; i++) {
             for (int j = 0; j <= 7; j++) {
                 for (int k = 0; k <= (Math.min(total - i - j, 7)); k++) {
-                    double temp = (100 + 4 * (4 + i)) / 100.0 * (1 + ((17.9 + 4 * (1 + j)) / 100.0 * (50 + 8 * (1 + k)) / 100.0));
+                    double temp = (100 + 4 * (4 + i)) / 100.0 * (1 + ((20 + 4 * (1 + j)) / 100.0 * (50 + 8 * (1 + k)) / 100.0));
                     if (result < temp) {
                         result = temp;
                         a = i;
