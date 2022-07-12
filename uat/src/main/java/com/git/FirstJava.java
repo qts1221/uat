@@ -26,12 +26,12 @@ public class FirstJava {
     }
 
     /**
-     * 雷怒专武震离伤害计算
+     * 伤害计算
      */
     @Test
     public void selfTest() {
         double result = 0.0;
-        int total = 13;//有效赋能条数，包括攻击暴击爆伤，初始12条，出了一对有效双属性多加一条
+        int total = 12;//有效赋能条数，包括攻击暴击爆伤，初始12条，出了一对有效双属性多加一条
         int a = 0;
         int b = 0;
         int c = 0;
@@ -39,14 +39,14 @@ public class FirstJava {
         for (int i = 0; i <= 4; i++) {
             for (int j = 0; j <= 7; j++) {
                 for (int k = 0; k <= (Math.min(total - i - j, 7)); k++) {
-                    double temp = (100 + 4 * (4 + i)) / 100.0 * (1 + ((20 + 4 * (1 + j)) / 100.0 * (50 + 8 * (1 + k)) / 100.0));
+                    double temp = (100 + 4 * (3 + i)) / 100.0 * (1 + ((21 + 4 * (1 + j)) / 100.0 * (50 + 8 * (1 + k)) / 100.0));
                     if (result < temp) {
                         result = temp;
                         a = i;
                         b = j;
                         c = k;
                     }
-                    if (temp > 1.77)
+                    if (temp > 1.73)
                         System.out.println("攻击条数" + (i + 4) + ",暴击条数" + (j + 1) + ",爆伤条数" + (k + 1) + ",总期望值为:" + temp);
                 }
             }
